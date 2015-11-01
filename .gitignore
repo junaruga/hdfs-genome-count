@@ -1,0 +1,15 @@
+# Mac
+.DS_Store
+._*
+# vi
+*.swp
+# Emacs
+*~
+# Hidemaru
+*.BAK
+# Pyenv
+.python-version
+
+# This project
+# Intellij - Java, Scala IDE
+.idea
