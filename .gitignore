@@ -13,6 +13,8 @@
 # This project
 # Intellij - Java, Scala IDE
 .idea
+scripts/java/genome-count/genome-count.iml
+scripts/java/genome-count/target/
 spark/scala/scala-genome-count/project/project/
 spark/scala/scala-genome-count/project/target/
 spark/scala/scala-genome-count/target/
