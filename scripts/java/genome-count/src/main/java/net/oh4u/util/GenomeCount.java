@@ -53,7 +53,7 @@ public class GenomeCount {
         if (line == null) {
             throw new IllegalArgumentException("line is required.");
         }
-        Map countedMap = new HashMap();
+        Map<String, Integer> countedMap = new HashMap<String, Integer>();
 
         for (int pos = 0; pos < line.length(); pos++) {
             String c = line.substring(pos, pos + 1);
@@ -74,7 +74,8 @@ public class GenomeCount {
         return result;
     }
 
-    private Map<String, Integer> reduce(Map<String, Integer> totalMap, Map<String, Integer> map) {
+    private Map<String, Integer> reduce(Map<String, Integer> totalMap,
+                                        Map<String, Integer> map) {
         if (totalMap == null || map == null) {
             throw new IllegalArgumentException("totalMap or map is required.");
         }
