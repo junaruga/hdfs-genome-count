@@ -1,5 +1,3 @@
-import jdk.nashorn.internal.runtime.options.Options
-
 import scala.collection.mutable._
 import scala.io.Source
 
@@ -11,14 +9,14 @@ object GenomeCount {
   var queue = new Queue[HashMap[String, Int]]()
 
   def main(args: Array[String]): Unit = {
-    for (line <- Source.fromFile(GENOME_FILE).getLines()) {
+    for (line <- Source.fromFile(GENOME_FILE).getLines) {
       val countedMap = mapForLine(line)
       queue.enqueue(countedMap)
     }
 
     var totalMap = new HashMap[String, Int]
     while (queue.size > 0) {
-      val map = queue.dequeue()
+      val map = queue.dequeue
       totalMap = reduce(totalMap, map)
     }
 
@@ -31,7 +29,7 @@ object GenomeCount {
     val countedMap = new HashMap[String, Int]
 
     for (c <- line) {
-      val cStr = c.toString()
+      val cStr = c.toString
       if (!(countedMap contains cStr)) {
         countedMap(cStr) = 0
       }
